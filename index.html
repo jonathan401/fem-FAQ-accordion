@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | FAQ accordion</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <header>
+      <!-- make this link go to frontendmentor later -->
+      <a href="#" class="home-link">Visit Frontend mentor</a>
+    </header>
+    <main id="main">
+      <h1 class="visually-hidden">
+        Welcome to the FAQs page of Frontend Mentor!
+      </h1>
+      <section class="faq-container" aria-labelledby="faqs">
+        <div class="faq-container__header">
+          <!-- <img src="./assets/images/icon-star.svg" alt="" aria-hidden="true" /> -->
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="27"
+            height="41"
+            fill="none"
+            viewBox="0 0 40 41"
+          >
+            <path
+              fill="#AD28EB"
+              d="M37.5 20.5a2.467 2.467 0 0 1-1.64 2.344l-9.913 3.604-3.603 9.911a2.5 2.5 0 0 1-4.688 0l-3.604-9.922-9.911-3.593a2.5 2.5 0 0 1 0-4.688l9.921-3.604 3.594-9.911a2.5 2.5 0 0 1 4.688 0l3.604 9.921 9.911 3.594A2.467 2.467 0 0 1 37.5 20.5Z"
+            />
+          </svg>
+          <h2 id="faqs-header">Faqs</h2>
+        </div>
+        <ul class="accordions" aria-labelledby="faqs-header">
+          <li class="accordion-item">
+            <h3 class="accordion-item__header">
+              <button
+                class="accordion-item__trigger"
+                aria-expanded="false"
+                aria-controls="faq-offer"
+                id="faq-offer-trigger"
+              >
+                <span>What is Frontend Mentor, and how will it help me?</span>
+                <div class="accordion-trigger-state-indicators">
+                  <svg
+                    aria-hidden="true"
+                    class="accordion-item__trigger--closed"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="31"
+                    fill="none"
+                    viewBox="0 0 30 31"
+                  >
+                    <path
+                      fill="#AD28EB"
+                      d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
+                    />
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    class="accordion-item__trigger--open"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="31"
+                    fill="none"
+                    viewBox="0 0 30 31"
+                  >
+                    <path
+                      fill="#301534"
+                      d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </h3>
+            <div
+              class="collapsible-wrapper"
+              id="faq-offer"
+              role="region"
+              aria-labelledby="faq-offer-trigger"
+            >
+              <div class="accordion-item__content-wrapper">
+                <p class="accordion-item__content">
+                  Frontend Mentor offers realistic coding challenges to help
+                  developers improve their frontend coding skills with projects
+                  in HTML, CSS, and JavaScript. It's suitable for all levels and
+                  ideal for portfolio building.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="accordion-item">
+            <h3 class="accordion-item__header">
+              <button
+                class="accordion-item__trigger"
+                aria-expanded="false"
+                aria-controls="pricing"
+                id="pricing-trigger"
+              >
+                <span>Is Frontend Mentor free?</span>
+                <div class="accordion-trigger-state-indicators">
+                  <svg
+                    aria-hidden="true"
+                    class="accordion-item__trigger--closed"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="31"
+                    fill="none"
+                    viewBox="0 0 30 31"
+                  >
+                    <path
+                      fill="#AD28EB"
+                      d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
+                    />
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    class="accordion-item__trigger--open"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="31"
+                    fill="none"
+                    viewBox="0 0 30 31"
+                  >
+                    <path
+                      fill="#301534"
+                      d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </h3>
+            <div
+              class="collapsible-wrapper"
+              id="pricing"
+              role="region"
+              aria-labelledby="pricing-trigger"
+            >
+              <div class="accordion-item__content-wrapper">
+                <p class="accordion-item__content">
+                  Yes, Frontend Mentor offers both free and premium coding
+                  challenges, with the free option providing access to a range
+                  of projects suitable for all skill levels.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="accordion-item">
+            <h3 class="accordion-item__header">
+              <button
+                class="accordion-item__trigger"
+                aria-expanded="false"
+                aria-controls="uses"
+                id="uses-trigger"
+              >
+                <span>Can I use Frontend Mentor projects in my portfolio?</span>
+                <div class="accordion-trigger-state-indicators">
+                  <svg
+                    aria-hidden="true"
+                    class="accordion-item__trigger--closed"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="31"
+                    fill="none"
+                    viewBox="0 0 30 31"
+                  >
+                    <path
+                      fill="#AD28EB"
+                      d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
+                    />
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    class="accordion-item__trigger--open"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="31"
+                    fill="none"
+                    viewBox="0 0 30 31"
+                  >
+                    <path
+                      fill="#301534"
+                      d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </h3>
+            <div
+              class="collapsible-wrapper"
+              id="uses"
+              role="region"
+              aria-labelledby="uses-trigger"
+            >
+              <div class="accordion-item__content-wrapper">
+                <p class="accordion-item__content">
+                  Yes, you can use projects completed on Frontend Mentor in your
+                  portfolio. It's an excellent way to showcase your skills to
+                  potential employers!
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="accordion-item">
+            <h3 class="accordion-item__header">
+              <button
+                class="accordion-item__trigger"
+                aria-expanded="false"
+                aria-controls="help"
+                id="help-trigger"
+              >
+                <span>How can I get help if I'm stuck on a challenge?</span>
+                <div class="accordion-trigger-state-indicators">
+                  <svg
+                    aria-hidden="true"
+                    class="accordion-item__trigger--closed"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="31"
+                    fill="none"
+                    viewBox="0 0 30 31"
+                  >
+                    <path
+                      fill="#AD28EB"
+                      d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
+                    />
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    class="accordion-item__trigger--open"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="31"
+                    fill="none"
+                    viewBox="0 0 30 31"
+                  >
+                    <path
+                      fill="#301534"
+                      d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </h3>
+            <div
+              class="collapsible-wrapper"
+              id="help"
+              role="region"
+              aria-labelledby="help-trigger"
+            >
+              <div class="accordion-item__content-wrapper">
+                <p class="accordion-item__content">
+                  The best place to get help is inside Frontend Mentor's Discord
+                  community. There's a help channel where you can ask questions
+                  and seek support from other community members.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Kehinde</a>.
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,288 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+  --purple-accent: #ad28eb;
+  --fallback-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* worksans regular */
+@font-face {
+  font-family: "WorkSans Regular";
+  src: local("WorkSans Regular"),
+    url("./assets/fonts/static/WorkSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* worksans medium */
+@font-face {
+  font-family: "WorkSans Medium";
+  src: local("WorkSans Medium"),
+    url("./assets/fonts/static/WorkSans-SemiBold.ttf") format("truetype");
+}
+
+/* worksans bold */
+@font-face {
+  font-family: "WorkSans Bold";
+  src: local("WorkSans Bold"),
+    url("./assets/fonts/static/WorkSans-Bold.ttf") format("truetype");
+}
+
+/* variable fonts will be displayed here */
+
+body {
+  font-family: "WorkSans Regular", serif;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: var(--light-pink);
+}
+
+main {
+  place-items: center;
+  display: grid;
+  padding: 0 1rem;
+  /* position: relative; */
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  height: 40%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul[role="list"],
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.home-link {
+  color: var(--dark-purple);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+header {
+  padding: 1rem;
+}
+
+.faq-container {
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 28rem;
+  background-color: var(--white);
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.06);
+}
+
+#faqs-header {
+  font-family: "WorkSans Medium";
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-size: 1.7rem;
+}
+
+.faq-container__header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-purple);
+}
+
+.accordions {
+  display: grid;
+}
+
+.accordion-item {
+  padding: 1.5rem 0;
+}
+
+.accordion-item:not(:last-child) {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+}
+
+.accordion-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1.2;
+  font-size: 1rem;
+  color: var(--dark-purple);
+}
+
+.accordion-item__header svg {
+  flex-shrink: 0;
+}
+
+.accordion-item__trigger {
+  border: none;
+  all: inherit;
+  cursor: pointer;
+  width: 100%;
+  transition: color 150ms ease, outline 150ms ease;
+}
+
+.accordion-item__trigger span {
+  max-width: 80%;
+}
+
+.accordion-item__trigger:focus {
+  outline: 4px dotted var(--purple-accent);
+  outline-offset: 4px;
+}
+
+.accordion-item__trigger:hover {
+  color: var(--purple-accent);
+}
+
+/* when the accordion is not open */
+.accordion-item__trigger[aria-expanded] .accordion-item__trigger--open {
+  display: none;
+}
+
+.accordion-item__trigger[aria-expanded] .accordion-item__trigger--closed {
+  display: block;
+}
+
+/* when the accordion is open */
+.accordion-item__trigger[aria-expanded="true"]
+  .accordion-item__trigger--closed {
+  display: none;
+}
+
+.accordion-item__trigger[aria-expanded="true"] .accordion-item__trigger--open {
+  display: block;
+}
+
+.accordion-trigger-state-indicators {
+  display: flex;
+  align-items: center;
+}
+
+.accordion-item__content {
+  font-size: 1rem;
+  color: var(--grayish-purple);
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+.collapsible-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  opacity: 0;
+  transition: grid-template-rows 250ms ease, opacity 200ms ease;
+}
+
+.collapsible-wrapper.expanded {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  opacity: 1;
+}
+
+.accordion-item__content-wrapper {
+  min-height: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-family: "WorkSans Bold", sans-serif;
+}
+
+.attribution a {
+  color: var(--purple-accent);
+}
+
+.attribution a:focus {
+  outline: 2px dotted var(--purple-accent);
+}
+
+@media screen and (min-width: 60rem) {
+  main::before {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+  }
+
+  .faq-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    /* max-width: none; */
+    justify-self: center;
+    max-width: 40rem;
+    /* width: 100%; */
+    padding: 2.5rem;
+  }
+
+  .accordion-item__header {
+    font-size: 1.1rem;
+    gap: 1.5rem;
+    white-space: nowrap;
+  }
+}
