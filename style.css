@@ -144,7 +144,7 @@ header {
   font-family: "WorkSans Medium";
   text-transform: uppercase;
   line-height: 1.5;
-  font-size: 1.7rem;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
 }
 
 .faq-container__header {
@@ -274,8 +274,13 @@ header {
     top: 0;
     left: 0;
     justify-self: center;
-    max-width: 40rem;
+    max-width: none;
+    width: 40rem;
     padding: 2.5rem;
+  }
+
+  #faqs-header {
+    font-family: "WorkSans Bold";
   }
 
   .accordion-item__header {
