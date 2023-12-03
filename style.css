@@ -288,4 +288,9 @@ header {
     gap: 1.5rem;
     white-space: nowrap;
   }
+
+  .accordion-item__trigger span {
+  max-width: none;
+  width: 100%;
+  }
 }
